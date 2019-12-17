@@ -5,12 +5,6 @@ module.exports = function (app) {
 app.get("/api/friends", function(req, res){
 res.json(friends)
 })
-    // app.get("/api/friends", function (req, res) {
-    //     console.log("anything")
-    //     res.json(friends);
-    
-    // });
-
     app.post("/api/friends", function (req, res) {
 
         // Initialize array to hold comparison results
@@ -38,7 +32,7 @@ res.json(friends)
         res.json(bestFriend);
 
         // Add current user to friendsArray
-        friends.push(req.body);
+        friendsArray.push(req.body);
     });
 
 }
